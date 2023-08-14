@@ -30,6 +30,7 @@ public class AppTest {
 	public void testcase_1() throws InterruptedException 
 {
 
+		driver.get("http://jqueryui.com/droppable/");
 		String title =driver.getTitle();
 		Assert.assertEquals(title, "Droppable | jQuery UI");
 	}
