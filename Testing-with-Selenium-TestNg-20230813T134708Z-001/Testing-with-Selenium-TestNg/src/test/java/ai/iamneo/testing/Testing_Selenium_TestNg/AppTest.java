@@ -1,5 +1,4 @@
 package ai.iamneo.testing.Testing_Selenium_TestNg;
-import java.lang*;
 import org.testng.annotations.Test;
 import java.net.URL;
 import java.util.*;
@@ -44,11 +43,11 @@ public class AppTest {
 	    WebDriver id;
 		final WebElement frm=driver.findElement(By.xpath("//"[@id=\"content\"]/iframe));"
 		driver.switchTo().frame(frm);
-		WebElement source =driver.findElement(By.id("draggable"));
+		final WebElement source =driver.findElement(By.id("draggable"));
 		WebElement destination =driver.findElement(By.id("droppable"));
 		Actions act =new Actions(driver);
 		act.dragAndDrop(source,destination).build().perform();
-		WebElement text=driver.findElement(By.xpath("//[@id=\"droppable\"/p"])); 	
+		final WebElement text=driver.findElement(By.xpath("//[@id=\"droppable\"/p"])); 	
 		 String get =text.getText();;
 		String title;
 		Assert.assertEquals(get,"Dropped!");
