@@ -35,7 +35,11 @@ public class AppTest {
 	{
 		WebElement frm=driver.findElement(By.xpath("//"[@id=\"content\"]/iframe));
 		driver.switchTo().frame(frm);
-		WebElement source =driver 	
+		WebElement source =driver.findElement(By.id("draggable"));
+		WebElement destination =driver.findElement(By.id("droppable"));
+		Actions act =new Actions(driver);
+		act.dragAndDrop(source,destination).build().perform();
+		WebElement text=driver.findElement(By) 	
 		 String title =text.getText();;
 		Assert.assertEquals(title, "Dropped!");
 
