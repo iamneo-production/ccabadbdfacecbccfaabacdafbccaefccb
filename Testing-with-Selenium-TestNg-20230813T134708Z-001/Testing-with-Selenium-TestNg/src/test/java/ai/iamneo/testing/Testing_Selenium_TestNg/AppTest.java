@@ -34,15 +34,16 @@ public class AppTest {
 		 String title =driver.getTitle();
 		Assert.assertEquals(title, "Droppable | jQuery UI");
 	}
+	/**
+	 * @throws InterruptedException
+	 */
 	@Test
 //Moving to FACEBOOK
 	public void testcase_2() throws InterruptedException 
 	{
-		WebDriver id;
-        String frm;
-		xpath = By.xpath("//"[@id=\"content\"]/iframe));"
+	    WebDriver id;
+		final WebElement frm=driver.findElement(By.xpath("//"[@id=\"content\"]/iframe));"
 		driver.switchTo().frame(frm);
-		WebElement frm=driver.findElement(xpath;
 		WebElement source =driver.findElement(By.id("draggable"));
 		WebElement destination =driver.findElement(By.id("droppable"));
 		Actions act =new Actions(driver);
