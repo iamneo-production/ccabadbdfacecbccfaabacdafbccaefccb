@@ -28,9 +28,9 @@ public class AppTest {
 	@Test
 //Checking the title of iamNeo (Home - iamneo)
 	public void testcase_1() throws InterruptedException 
-	{
+{
 
-		 String title =driver.getTitle();
+		String title =driver.getTitle();
 		Assert.assertEquals(title, "Droppable | jQuery UI");
 	}
 	/**
