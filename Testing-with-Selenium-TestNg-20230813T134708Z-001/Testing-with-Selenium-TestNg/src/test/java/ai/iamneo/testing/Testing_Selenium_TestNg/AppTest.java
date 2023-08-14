@@ -31,11 +31,13 @@ public class AppTest {
 	}
 	@Test
 //Moving to FACEBOOK
-	public void testc() throws InterruptedException 
+	public void testcase_2() throws InterruptedException 
 	{
-		 	
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
+		WebElement frm=driver.findElement(By.xpath("//"[@id=\"content\"]/iframe));
+		driver.switchTo().frame(frm);
+		WebElement source =driver 	
+		 String title =text.getText();;
+		Assert.assertEquals(title, "Dropped!");
 
 	}
 	@Test
