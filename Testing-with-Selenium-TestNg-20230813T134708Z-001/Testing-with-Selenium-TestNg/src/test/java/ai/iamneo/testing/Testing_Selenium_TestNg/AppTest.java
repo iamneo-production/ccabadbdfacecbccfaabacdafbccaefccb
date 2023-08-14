@@ -48,8 +48,7 @@ public class AppTest {
 		Actions act =new Actions(driver);
 		act.dragAndDrop(source,destination).build().perform();
 		final WebElement text=driver.findElement(By.xpath("//[@id=\"droppable\"/p"])); 	
-		 String get =text.getText();;
-		String title;
+		 String get =text.getText();
 		Assert.assertEquals(get,"Dropped!");
 
 	}
@@ -66,15 +65,6 @@ public class AppTest {
 		 Assert.assertEquals(color, "#777620");
 
 	}
-	@Test
-//Current URL
-public void currentURL() throws InterruptedException 
-{
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-
-}
-
 	@AfterTest
 	public void afterTest() 
 	{
