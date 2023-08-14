@@ -1,8 +1,8 @@
 package ai.iamneo.testing.Testing_Selenium_TestNg;
-
+import java.lang*;
 import org.testng.annotations.Test;
 import java.net.URL;
-
+import java.util.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +18,6 @@ public class AppTest {
 
 	ChromeOptions chromeOptions = new ChromeOptions();
 	WebDriver driver = null;
-	private By xpath;
 
 	@BeforeTest
 	public void beforeTest() throws Exception
