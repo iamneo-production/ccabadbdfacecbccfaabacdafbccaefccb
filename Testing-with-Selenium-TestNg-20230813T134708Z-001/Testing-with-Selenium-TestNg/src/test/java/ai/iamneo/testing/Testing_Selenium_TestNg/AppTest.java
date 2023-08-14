@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.Color;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -49,16 +50,20 @@ public class AppTest {
 		WebElement text=driver.findElement(By.xpath("//[@id=\"droppable\"/p"])); 	
 		 String get =text.getText();;
 		String title;
-		Assert.assertEquals(title, "Dropped!");
+		Assert.assertEquals(get,"Dropped!");
 
 	}
+	/**
+	 * 
+	 */
 	@Test
 //Back to iamNeo
-	public void backPage() throws InterruptedException 
+	public void testcase_3() throws InterruptedException 
 	{
-		 String clr
+		 WebElement destination =driver.findElement(By.id("droppable"));
+		 String clr=destination.getCssValue("color");
 		 String color =Color.fromString(clr).asHex();;
-		 Assert.assertEquals(title, "");
+		 Assert.assertEquals(color, "#777620");
 
 	}
 	@Test
